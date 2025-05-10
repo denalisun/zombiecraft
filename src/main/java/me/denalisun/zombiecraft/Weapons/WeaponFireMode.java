@@ -1,4 +1,4 @@
-package com.denalisun.zombiecraft.Weapons;
+package me.denalisun.zombiecraft.Weapons;
 
 public enum WeaponFireMode {
     SEMI_AUTO(0), FULLY_AUTO(1), BURST_FIRE(2);
@@ -8,7 +8,7 @@ public enum WeaponFireMode {
         this.FireMode = fireMode;
     }
 
-    public int GetFireMode() {
+    public int getFireMode() {
         return this.FireMode;
     }
 }

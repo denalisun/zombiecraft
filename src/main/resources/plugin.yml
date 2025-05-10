@@ -1,0 +1,5 @@
+main: me.denalisun.zombiecraft.Zombiecraft
+name: ZombieCraft Engine
+version: 1.0.0
+description: Engine for CoD Zombies-like minigames in Minecraft
+author: denalisun

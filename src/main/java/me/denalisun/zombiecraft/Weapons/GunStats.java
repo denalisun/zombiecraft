@@ -1,4 +1,4 @@
-package com.denalisun.zombiecraft.Weapons;
+package me.denalisun.zombiecraft.Weapons;
 
 public class GunStats {
     public int Damage;
