@@ -1,2 +1,68 @@
 # zombiecraft
 A resurrection of the old Minecraft mod Zombiecraft as a Spigot plugin.
+
+## Guns (WIP)
+- Assault Rifles
+    - Semi-Auto Assault Rifle (M1 Carbine)
+    - Assault Rifle (STG44)
+- Submachine Guns
+    - Side-Fed SMG (Type 100)
+    - Submachine Gun (Thompson potentially)
+    - Fore-Fed SMG (MP40)
+- Shotguns
+    - Pump-Action Shotgun
+    - Fully-Auto Shotgun
+- Snipers
+    - Auto Sniper
+    - Bolt-Action Sniper
+- Miscellaneous
+    - Explosive Crossbow
+    - Metal Bow
+    - Knife
+    - Bowie Knife
+- Wonder Weapons
+    - Blowback Engine (Thundergun / Die Shockwave / Jet Gun)
+    - Ray Gun
+    - Sculkfire
+    - Ghastling Servant
+
+## Weapon Attachments
+- Sights
+    - Red Dot
+        - Higher accuracy but slower speed when ADSing
+- Barrels
+    - Silencer
+        - Just sounds cool
+    - Compensator
+        - 25% less recoil, 10% more spread
+    - Heavy-fire Barrel
+        - 25% more damage, 25% less firerate
+    - Scatter Barrel
+        - Add's shotgun-like spread to all guns, decreased damage
+            - Adds more pellets to shotguns
+- Magazines
+    - Fast Mag
+        - +35% reload speed, -10% ammo
+    - Extended mag
+        - -25% reload speed, +25% ammo
+    - Belt-Fed
+        - Removes all reload
+- Stocks/Grips
+    - Foregrip
+        - -10% recoil
+    - Ergonomic Stock
+        - +10% movement speed, +12% recoil
+    - Pistol Grip
+        - +30% movement speed, +25% recoil
+- Ammo
+    - 
+- Charger Packs
+    - 5V Battery
+        - +25% Fire-rate
+    - 12V Battery
+        - +50% Fire-rate
+    - Overclock
+        - +25% Damage, 20-shot cooldown
+    - Jump-Start
+        - Makes all guns full-auto
+    - [Need to make more]
