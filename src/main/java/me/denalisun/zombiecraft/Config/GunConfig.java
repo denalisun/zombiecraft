@@ -35,9 +35,9 @@ public class GunConfig {
     public int MaxStock;
 
     @SerializedName("fireMode")
-    public int FireMode;
+    public String FireMode;
 
-    public GunConfig(String name, String materialString, int damage, int firerate, float spread, float reloadtime, float recoil, int maxclip, int maxstock, int firemode) {
+    public GunConfig(String name, String materialString, int damage, int firerate, float spread, float reloadtime, float recoil, int maxclip, int maxstock, String firemode) {
         this.Name = name;
         this.Material = materialString;
         this.Damage = damage;
@@ -54,15 +54,15 @@ public class GunConfig {
         return Name;
     }
 
-    public String getId() {
-        return Id;
+    public String getMaterialString() {
+        return Material;
     }
 
     public int getDamage() {
         return Damage;
     }
 
-    public int getFireRate() {
+    public float getFireRate() {
         return FireRate;
     }
 
@@ -90,7 +90,7 @@ public class GunConfig {
         return MaxStock;
     }
 
-    public int getFireMode() {
+    public String getFireMode() {
         return FireMode;
     }
 }

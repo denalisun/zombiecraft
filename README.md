@@ -27,10 +27,10 @@ A resurrection of the old Minecraft mod Zombiecraft as a Spigot plugin.
     - Ghastling Servant
 
 ## Weapon Attachments
-- Sights
+- Sights (In-Menu & In-Game)
     - Red Dot
         - Higher accuracy but slower speed when ADSing
-- Barrels
+- Barrels (In-Menu & In-Game) 
     - Silencer
         - Just sounds cool
     - Compensator
@@ -40,23 +40,30 @@ A resurrection of the old Minecraft mod Zombiecraft as a Spigot plugin.
     - Scatter Barrel
         - Add's shotgun-like spread to all guns, decreased damage
             - Adds more pellets to shotguns
-- Magazines
+- Magazines (In-Menu & In-Game)
     - Fast Mag
         - +35% reload speed, -10% ammo
     - Extended mag
         - -25% reload speed, +25% ammo
     - Belt-Fed
         - Removes all reload
-- Stocks/Grips
+- Stocks/Grips (In-Menu & In-Game)
     - Foregrip
         - -10% recoil
     - Ergonomic Stock
         - +10% movement speed, +12% recoil
     - Pistol Grip
         - +30% movement speed, +25% recoil
-- Ammo
-    - 
-- Charger Packs
+- Ammo Types (In-Game)
+    - Full Metal Jacket
+        - 15% more damage
+    - Dragon's Breath
+        - Sets enemies on fire
+    - Multishot Rounds
+        - On hitting an enemy, more bullets that do 50% damage go to other enemies in a 2-block radius
+    - Sculk Rounds
+        - On hitting an enemy, gives Slowness for 10 seconds
+- Charger Packs (In-Game)
     - 5V Battery
         - +25% Fire-rate
     - 12V Battery

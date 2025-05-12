@@ -1,5 +1,10 @@
-main: me.denalisun.zombiecraft.Zombiecraft
-name: ZombieCraft Engine
+main: me.denalisun.zombiecraft.ZombieCraft
+name: ZombieCraft
 version: 1.0.0
 description: Engine for CoD Zombies-like minigames in Minecraft
 author: denalisun
+api-version: '1.21.5'
+commands:
+  giveweapon:
+    description: Gives weapon
+    usage: /<command>

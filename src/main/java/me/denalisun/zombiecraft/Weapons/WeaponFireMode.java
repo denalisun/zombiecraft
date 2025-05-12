@@ -11,4 +11,11 @@ public enum WeaponFireMode {
     public int getFireMode() {
         return this.FireMode;
     }
+
+    public static WeaponFireMode fromInt(int mode) {
+        for (WeaponFireMode f : values()) {
+            if (f.getFireMode() == mode) return f;
+        }
+        return WeaponFireMode.SEMI_AUTO; // default fallback
+    }
 }

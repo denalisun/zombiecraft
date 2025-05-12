@@ -11,6 +11,7 @@ import org.bukkit.block.Block;
 
 import com.google.gson.Gson;
 
+import me.denalisun.zombiecraft.Utils;
 import me.denalisun.zombiecraft.Config.GunConfig;
 
 public class GunManager {
@@ -41,13 +42,13 @@ public class GunManager {
                 GunConfig gunConfig = gson.fromJson(reader, GunConfig.class);
 
                 Material gunMat = getSafeMaterial(gunConfig.Material, Material.WOODEN_SHOVEL);
-                WeaponFireMode fireMode = gunConfig.getFireMode();
+                WeaponFireMode fireMode = WeaponFireMode.valueOf(gunConfig.getFireMode());
 
                 GunStats gunStats = new GunStats(gunConfig.getDamage(), gunConfig.getFireRate(), gunConfig.getRange(), gunConfig.getSpread(), gunConfig.getReloadTime(), gunConfig.getRecoil(), gunConfig.getMaxClip(), gunConfig.getMaxStock(), fireMode);
-                Gun gun = new Gun(gunMat, gunConfig.getName(), gunConfig.getId(), gunStats);
+                Gun gun = new Gun(gunMat, gunConfig.getName(), Utils.removeFileExtension(file.getName()), gunStats);
 
-                gunPool.put(gun.getName().toLowerCase(), gun);
-                System.out.println("Loaded gun: " + gun.getName());
+                gunPool.put(Utils.removeFileExtension(file.getName()), gun);
+                System.out.println("Loaded gun: " + gunConfig.getName());
             } catch (Exception e) {
                 System.err.println("Failed to load " + file.getName());
                 e.printStackTrace();
@@ -59,7 +60,7 @@ public class GunManager {
         return gunPool;
     }
 
-    public Gun getGunByName(String gunName) {
-        return gunPool.get(gunName.toLowerCase());
+    public Gun getGunByID(String gunID) {
+        return gunPool.get(gunID.toLowerCase());
     }
 }

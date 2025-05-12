@@ -2,5 +2,8 @@
 /home/denalisun/Programming/zombiecraft/src/main/java/me/denalisun/zombiecraft/Config/GunConfig.java
 /home/denalisun/Programming/zombiecraft/src/main/java/me/denalisun/zombiecraft/ZombieCraft.java
 /home/denalisun/Programming/zombiecraft/src/main/java/me/denalisun/zombiecraft/Weapons/GunManager.java
+/home/denalisun/Programming/zombiecraft/src/main/java/me/denalisun/zombiecraft/Weapons/ShootingListener.java
 /home/denalisun/Programming/zombiecraft/src/main/java/me/denalisun/zombiecraft/Weapons/Gun.java
+/home/denalisun/Programming/zombiecraft/src/main/java/me/denalisun/zombiecraft/Utils.java
+/home/denalisun/Programming/zombiecraft/src/main/java/me/denalisun/zombiecraft/Commands/GiveWeaponCommand.java
 /home/denalisun/Programming/zombiecraft/src/main/java/me/denalisun/zombiecraft/Weapons/GunStats.java
