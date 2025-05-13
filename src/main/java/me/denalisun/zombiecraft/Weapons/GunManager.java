@@ -3,16 +3,13 @@ package me.denalisun.zombiecraft.Weapons;
 import java.io.File;
 import java.io.FileReader;
 import java.util.HashMap;
-import java.util.Map;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 
 import com.google.gson.Gson;
 
-import me.denalisun.zombiecraft.Utils;
 import me.denalisun.zombiecraft.Config.GunConfig;
+import me.denalisun.zombiecraft.Utils;
 
 public class GunManager {
     private final HashMap<String, Gun> gunPool = new HashMap<>();

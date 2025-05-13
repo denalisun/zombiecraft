@@ -1,8 +1,8 @@
 package me.denalisun.zombiecraft.Weapons;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.UUID;
 
 import org.bukkit.Location;
@@ -17,6 +17,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.RayTraceResult;
+import org.bukkit.util.Vector;
 
 public class ShootingListener implements Listener {
     private final GunManager gunManager;
@@ -70,16 +71,19 @@ public class ShootingListener implements Listener {
         player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_EXPLODE, 1f, 1.5f);
         player.getWorld().spawnParticle(Particle.SMOKE, player.getEyeLocation(), 1);
 
-        // Recoil
-        Location recoilLoc = player.getLocation();
-        recoilLoc.setPitch(recoilLoc.getPitch() + (-gun.getRecoil()));
-        player.teleport(recoilLoc); //TODO: Replace with Packets using NMS or ProtocolLib (if it gets updated)
-
+        // Spread
         Location eye = player.getEyeLocation();
-        RayTraceResult result = player.getWorld().rayTraceEntities(eye, eye.getDirection(), gun.getRange(), entity -> entity != player);
+        Vector direction = eye.getDirection().normalize();
+        Random random = new Random();
+        double xOffset = (random.nextDouble() - 0.5) * gun.getSpread();
+        double yOffset = (random.nextDouble() - 0.5) * gun.getSpread();
+        double zOffset = (random.nextDouble() - 0.5) * gun.getSpread();
+        Vector spreadVec = direction.add(new Vector(xOffset, yOffset, zOffset));
+
+        RayTraceResult result = player.getWorld().rayTraceEntities(eye, spreadVec, gun.getRange(), entity -> entity != player);
         Location loc = eye.clone();
         for (double i = 0; i < gun.getRange(); i += 0.5) {
-            loc.add(eye.getDirection().clone().multiply(0.5));
+            loc.add(spreadVec.clone().multiply(0.5));
             player.getWorld().spawnParticle(Particle.SMOKE, loc, 1, 0, 0, 0, 0);
             if (result != null && loc.distanceSquared(result.getHitPosition().toLocation(loc.getWorld())) < 0.5) {
                 break;
